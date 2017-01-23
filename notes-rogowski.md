@@ -4,7 +4,7 @@ notes on Stamford CS231n lecture 13
 
 ## Segmentation
 
-there are two different subtasks
+there are two different subtasks. There are also classic approachs, and 'deep learning' approaches.
 
 ### Semantic Segmentation
 the semantic segmentation procedure takes an image as input, and, for each
@@ -17,9 +17,7 @@ represents objects that don't fit into the other classes.[1](https://youtu.be/UF
 Matrix m n RGB -> Matrix m n Class
 ```
 
-instances of classified objects are not differentiated
-
-there is a classic approach, and a 'deep learning' approach
+Note: Instances of classified objects are not differentiated.
 
 ### Instance Segmentation
 
@@ -36,12 +34,11 @@ see source [3](https://youtu.be/UFnO-ADC-k0?t=9m25s)
 
 ##### Pixelwise
 
-1) extract all patches of input image
-2) for each patch, run it through a conv net that classifies the center pixel
-of the patch
+1. extract all patches of input image
+2. for each patch, run it through a conv net that classifies the center pixel of the patch
 
-this is expensive. in order to avoid this, segmentation can in a 
-'fully convolutional' manner. note: if using this method, downsampling/pooling
+Performing segmentation this way is expensive. In order to avoid this, segmentation can proceed in a 
+'fully convolutional' manner. Note: if using this method, downsampling/pooling
 will decrease spacial size of output [4](https://youtu.be/UFnO-ADC-k0?t=10m42s)
 
 ##### Multiscale Pixelwise
